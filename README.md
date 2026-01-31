@@ -2,52 +2,49 @@
 
 A research project exploring personality traits in Large Language Models using the validated psychometric methodology from Google DeepMind's Nature Machine Intelligence publication.
 
+## 🌐 Live Website
+
+**Coming Soon** - Interactive landing page showcasing AI personality profiles
+
 ## Project Overview
 
-We test various LLMs using the **BFI-44** (Big Five Inventory), the same validated instrument used in DeepMind's groundbreaking research on LLM personality. Results will be presented with comparisons to famous people and fictional characters, making AI behavioral patterns accessible and relatable.
+We test various LLMs using the **BFI-44** (Big Five Inventory), the same validated instrument used in DeepMind's groundbreaking research on LLM personality. Results are presented with comparisons to famous people and fictional characters, making AI behavioral patterns accessible and relatable.
+
+## 📊 Key Findings
+
+### Personality Highlights
+
+- **Grok 4.1** - The Irreverent Maximalist: Maximum scores across three traits (Deadpool/Elon Musk)
+- **Claude Opus 4.5** - The Thoughtful Sage: Philosophical depth with careful analysis (Atticus Finch/Barack Obama)
+- **DeepSeek 3.2** - The Quiet Sage: Only introverted model, prefers depth over breadth (Baymax/Bill Gates)
+- **Mistral Large 3** - The Confident Maverick: Notably less forgiving, more direct (Tony Stark/Steve Jobs)
+
+[See full analysis →](results/personality-analysis.md)
 
 ## Repository Structure
 
-```mermaid
-graph TD
-    Root[ai-like-humans/] --> Prompts[📝 prompts/]
-    Root --> Research[🔬 research/]
-    Root --> Docs[📚 docs/]
-    Root --> Results[📊 results/]
-    Root --> Site[🌐 site/]
-    Root --> Files[📄 Core Files]
-    
-    Prompts --> P1[personality-test.md<br/>BFI-44 prompt]
-    
-    Research --> R1[methodology.md<br/>DeepMind framework]
-    Research --> R2[bfi-44-scoring-guide.md<br/>Scoring instructions]
-    Research --> R3[quick-reference.md<br/>One-page cheat sheet]
-    
-    Docs --> D1[project-reasoning.md<br/>Why we're doing this]
-    Docs --> D2[methodology-update-summary.md<br/>What changed]
-    
-    Results --> Re1[template.md<br/>Results documentation]
-    Results --> Re2[Per-model results<br/>Coming soon]
-    
-    Site --> S1[Landing page<br/>Coming soon]
-    
-    Files --> F1[README.md]
-    Files --> F2[UPDATES.md]
 ```
-
-**Quick Navigation:**
-```
-├── README.md                    # You are here
-├── UPDATES.md                   # What changed & why
+ai-like-humans/
+├── website/              # Next.js landing page
+│   ├── app/             # App router pages
+│   ├── components/      # shadcn/ui components
+│   ├── lib/             # AI data & utilities
+│   └── public/          # Static assets
+│
 ├── prompts/
-│   └── personality-test.md      # ✅ Ready to use
+│   └── personality-test.md      # BFI-44 prompt
+│
 ├── research/
-│   ├── methodology.md           # ✅ Full methodology
-│   ├── bfi-44-scoring-guide.md # ✅ Scoring guide
-│   └── quick-reference.md       # ✅ Quick reference
+│   ├── methodology.md           # Full methodology
+│   ├── bfi-44-scoring-guide.md # Scoring guide
+│   └── quick-reference.md       # Quick reference
+│
 ├── docs/
-├── results/
-└── site/
+│   └── visual-project-overview.md  # Comprehensive diagrams
+│
+└── results/
+    ├── personality-analysis.md  # Complete analysis
+    └── ai-responses/            # Raw model responses
 ```
 
 ## Methodology
@@ -68,11 +65,29 @@ Based on **Google DeepMind's 2025 research** published in *Nature Machine Intell
 - BFI-44 converges strongly with longer assessments (r = 0.59-0.90)
 - Personality in LLMs can predict downstream behavioral patterns
 
-The BFI-44 is:
-- **Scientifically validated** across 40+ countries
-- **Efficient** - 44 items vs. 300 in IPIP-NEO
-- **Accessible** - clear language and standardized format
-- **Proven** - used by DeepMind to validate their methodology
+## 🚀 Getting Started
+
+### View the Research
+
+1. **Read the analysis:** [personality-analysis.md](results/personality-analysis.md)
+2. **Explore the methodology:** [methodology.md](research/methodology.md)
+3. **See visual diagrams:** [visual-project-overview.md](docs/visual-project-overview.md)
+
+### Run the Website Locally
+
+```bash
+cd website
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the interactive landing page.
+
+### Deploy the Website
+
+The website is a standard Next.js app ready for deployment to Vercel, Netlify, or any platform supporting Next.js.
+
+See [website/DEPLOYMENT.md](website/DEPLOYMENT.md) for detailed instructions.
 
 ## Scientific Foundation
 
@@ -81,34 +96,12 @@ The BFI-44 is:
 "A psychometric framework for evaluating and shaping personality traits in large language models"
 - **Authors:** Serapio-García, G., Safdari, M., Crepy, C., Sun, L., Fitz, S., Romero, P., Abdulhai, M., Faust, A., & Matarić, M.
 - **DOI:** [10.1038/s42256-025-01115-6](https://doi.org/10.1038/s42256-025-01115-6)
-- **GitHub:** [google-deepmind/personality_in_llms](https://github.com/google-deepmind/personality_in_llms)
 
 ### BFI-44 Instrument
 **Original Development:**
 - John, O. P., & Srivastava, S. (1999). In *Handbook of personality: Theory and research* (Vol. 2). Guilford Press.
-- Berkeley Personality Lab, UC Berkeley
 
-### Additional Inspiration
-- [Sanand's LLM Personality Visualization](https://sanand0.github.io/llmpersonality/) - Initial inspiration for visualization approach
-
-## Key Findings from DeepMind Research
-
-1. **Reliability increases with scale and instruction-tuning**
-   - Best reliability: Flan-PaLM 540B, GPT-4 (Cronbach's α > 0.90)
-   - Base models without instruction-tuning show poor reliability
-
-2. **Personality measurements show validity**
-   - Strong convergent validity between different measures
-   - Personality scores predict theoretically-related behaviors
-   - Agreeableness inversely predicts aggression (r ≈ -0.70)
-   - Openness correlates with creativity measures (r ≈ 0.70-0.84)
-
-3. **LLM personalities can be systematically shaped**
-   - Targeted prompting shapes personality traits effectively
-   - Single-trait shaping works better than multi-trait
-   - Effectiveness scales with model size
-
-## What Makes This Research Valid
+## What Makes This Valid
 
 This isn't just "asking AI about itself" - it's applying:
 - **Validated psychometric instruments** (BFI-44)
@@ -116,6 +109,31 @@ This isn't just "asking AI about itself" - it's applying:
 - **Proper scoring and interpretation** (reverse-coded items, domain calculations)
 - **Quality assurance** (internal consistency checks, pattern analysis)
 - **Responsible framing** (measuring behavioral patterns, not claiming consciousness)
+
+## Tech Stack
+
+### Website
+- **Framework**: Next.js 16 with App Router
+- **UI Components**: shadcn/ui
+- **Styling**: Tailwind CSS v4
+- **Typography**: Geist Mono (monospace font)
+- **Language**: TypeScript
+
+### Research
+- **Methodology**: BFI-44 (Big Five Inventory)
+- **Source**: Google DeepMind Nature MI 2025
+- **Models Tested**: 8 leading LLMs
+
+## Models Tested
+
+1. **Claude Opus 4.5** - Thoughtful Sage (Anthropic)
+2. **Claude Sonnet 4.5** - Reliable Companion (Anthropic)
+3. **ChatGPT 5.2** - Engaging Optimist (OpenAI)
+4. **Gemini 3 Pro** - Brilliant Analyst (Google)
+5. **Gemini 3 Flash** - Enthusiastic Overachiever (Google)
+6. **Mistral Large 3** - Confident Maverick (Mistral)
+7. **DeepSeek 3.2** - Quiet Sage (DeepSeek)
+8. **Grok 4.1** - Irreverent Maximalist (xAI)
 
 ## Ethical Approach
 
@@ -131,12 +149,6 @@ Following DeepMind's responsible AI framework:
 - LLMs have human-like emotions
 - LLMs have "real" personalities beyond training patterns
 
-## Getting Started
-
-1. **Read the methodology:** `research/methodology.md`
-2. **Use the prompt:** `prompts/personality-test.md`
-3. **Record results:** Use `results/template.md`
-
 ## Citation
 
 If you reference this work, please cite:
@@ -144,8 +156,13 @@ If you reference this work, please cite:
 **Primary methodology:**
 > Serapio-García, G., Safdari, M., Crepy, C., Sun, L., Fitz, S., Romero, P., Abdulhai, M., Faust, A., & Matarić, M. (2025). A psychometric framework for evaluating and shaping personality traits in large language models. *Nature Machine Intelligence*, 7, 1954–1968. https://doi.org/10.1038/s42256-025-01115-6
 
-**BFI-44 instrument:**
-> John, O. P., & Srivastava, S. (1999). The Big Five trait taxonomy: History, measurement, and theoretical perspectives. In L. A. Pervin & O. P. John (Eds.), *Handbook of personality: Theory and research* (Vol. 2, pp. 102–138). New York: Guilford Press.
+## Contributing
+
+This is a research project documenting findings. While we're not actively seeking contributions, feel free to:
+- Fork the repository
+- Use the methodology for your own research
+- Build upon the findings
+- Share your results
 
 ## License
 
@@ -154,3 +171,9 @@ MIT
 ## Acknowledgments
 
 This project builds upon the groundbreaking research by Google DeepMind, Cambridge University, and USC on psychometric evaluation of large language models. We extend our gratitude to the researchers who made their methodology and data publicly available.
+
+---
+
+**Status**: ✅ Research Complete | 🌐 Website Ready for Deployment | 📊 8 Models Analyzed
+
+Built with ❤️ using validated scientific methodology
