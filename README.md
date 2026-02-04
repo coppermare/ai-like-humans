@@ -100,6 +100,8 @@ See [website/DEPLOYMENT.md](website/DEPLOYMENT.md) for detailed instructions.
 "A psychometric framework for evaluating and shaping personality traits in large language models"
 - **Authors:** Serapio-García, G., Safdari, M., Crepy, C., Sun, L., Fitz, S., Romero, P., Abdulhai, M., Faust, A., & Matarić, M.
 - **DOI:** [10.1038/s42256-025-01115-6](https://doi.org/10.1038/s42256-025-01115-6)
+- **GitHub:** [google-deepmind/personality_in_llms](https://github.com/google-deepmind/personality_in_llms)
+- **Data:** [Public dataset with LLM test scores](https://storage.googleapis.com/personality_in_llms/index.html)
 
 ### BFI-44 Instrument
 **Original Development:**

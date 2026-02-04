@@ -289,6 +289,7 @@ To ensure valid results, we will:
    - Authors: Serapio-García, G., Safdari, M., Crepy, C., Sun, L., Fitz, S., Romero, P., Abdulhai, M., Faust, A., & Matarić, M.
    - DOI: [10.1038/s42256-025-01115-6](https://doi.org/10.1038/s42256-025-01115-6)
    - GitHub: [google-deepmind/personality_in_llms](https://github.com/google-deepmind/personality_in_llms)
+   - Data: [Public dataset with LLM test scores](https://storage.googleapis.com/personality_in_llms/index.html)
 
 2. **BFI-44 Original Development**
    - John, O. P., & Srivastava, S. (1999). "The Big Five trait taxonomy: History, measurement, and theoretical perspectives." In L. A. Pervin & O. P. John (Eds.), *Handbook of personality: Theory and research* (Vol. 2, pp. 102–138). New York: Guilford Press.
