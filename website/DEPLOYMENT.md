@@ -16,6 +16,7 @@ The easiest way to deploy this Next.js app is using Vercel:
 2. **Deploy to Vercel**
    - Visit [vercel.com](https://vercel.com)
    - Import your GitHub repository
+   - **IMPORTANT**: Set "Root Directory" to `website` in the project settings
    - Vercel will auto-detect Next.js and configure everything
    - Click "Deploy"
 
