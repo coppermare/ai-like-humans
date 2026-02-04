@@ -93,6 +93,7 @@ This research builds upon:
    - Published: *Nature Machine Intelligence*, Volume 7, pages 1954–1968
    - DOI: [10.1038/s42256-025-01115-6](https://doi.org/10.1038/s42256-025-01115-6)
    - GitHub: [google-deepmind/personality_in_llms](https://github.com/google-deepmind/personality_in_llms)
+   - Data: [Public dataset with LLM test scores](https://storage.googleapis.com/personality_in_llms/index.html)
 
 2. **BFI-44 Original Development** - The psychometric instrument
    - John, O. P., & Srivastava, S. (1999). "The Big Five trait taxonomy: History, measurement, and theoretical perspectives." In *Handbook of personality: Theory and research* (Vol. 2, pp. 102–138). Guilford Press.

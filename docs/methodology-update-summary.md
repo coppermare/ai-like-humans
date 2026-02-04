@@ -239,6 +239,7 @@ Understanding these findings helps interpret our results:
 
 ### Helpful References
 - [DeepMind GitHub](https://github.com/google-deepmind/personality_in_llms) - Code & data
+- [DeepMind Public Dataset](https://storage.googleapis.com/personality_in_llms/index.html) - Raw LLM test scores and responses
 - [Berkeley Personality Lab](https://www.ocf.berkeley.edu/~johnlab/bfi.htm) - BFI-44 info
 - [Sanand's Visualization](https://sanand0.github.io/llmpersonality/) - Inspiration
 
