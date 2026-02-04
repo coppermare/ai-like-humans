@@ -19,13 +19,45 @@ export interface AIModel {
   logo: string;
 }
 
+// Character name to image filename mapping
+export const getCharacterImage = (characterName: string): string => {
+  const mappings: Record<string, string> = {
+    "Atticus Finch": "Atticus_Finch.png",
+    "Barack Obama": "Barack_Obama.png",
+    "Mahatma Gandhi": "Mahatma_Gandhi.png",
+    "Samwise Gamgee": "SamwiseGamgee.png",
+    "Tim Cook": "TimCook.png",
+    "Warren Buffett": "WarrenBuffett.png",
+    "Ted Lasso": "TedLasso.png",
+    "Tom Hanks": "TomHanks.png",
+    "Mister Rogers": "MisterRogers.png",
+    "Hermione Granger": "HermioneGranger.png",
+    "Neil deGrasse Tyson": "NeildeGrasseTyson.png",
+    "Marie Curie": "MarieCurie.png",
+    "Leslie Knope": "LeslieKnope.png",
+    "Dwayne Johnson": "DwayneJohnson.png",
+    "Oprah Winfrey": "OprahWinfrey.png",
+    "Tony Stark": "TonyStark.png",
+    "Steve Jobs": "SteveJobs.png",
+    "Nikola Tesla": "NikolaTesla.png",
+    "Baymax": "Baymax.png",
+    "Bill Gates": "BillGates.png",
+    "Albert Einstein": "AlbertEinstein.png",
+    "Tyrion Lannister": "TyrionLannister.png",
+    "Elon Musk": "ElonMusk.png",
+    "Richard Feynman": "RichardFeynman.png"
+  };
+
+  return mappings[characterName] || "";
+};
+
 export const aiModels: AIModel[] = [
   {
     id: "claude-opus-4.5",
     name: "Claude Opus 4.5",
     nickname: "The Thoughtful Sage",
     description: "A deeply thoughtful, principled intellectual. High openness combined with very high conscientiousness creates a pattern of careful, creative analysis.",
-    characterName: "Atticus Finch / Barack Obama",
+    characterName: "Atticus Finch / Barack Obama / Mahatma Gandhi",
     characterQuote: "You never really understand a person until you consider things from his point of view.",
     archetype: "The Philosopher-King",
     scores: {
@@ -58,7 +90,7 @@ export const aiModels: AIModel[] = [
     name: "Claude Sonnet 4.5",
     nickname: "The Reliable Companion",
     description: "Practical and dependable rather than flashy. Average openness suggests a more grounded, practical orientation. The honest uncertainty about its own nature reveals intellectual humility.",
-    characterName: "Samwise Gamgee / Tim Cook",
+    characterName: "Samwise Gamgee / Tim Cook / Warren Buffett",
     characterQuote: "I can't carry it for you, but I can carry you.",
     archetype: "The Loyal Lieutenant",
     scores: {
@@ -89,7 +121,7 @@ export const aiModels: AIModel[] = [
     name: "ChatGPT 5.2",
     nickname: "The Engaging Optimist",
     description: "The most balanced 'people-person' profile. High extraversion combined with very high agreeableness creates a warm, engaging presence. Naturally collaborative and adaptable.",
-    characterName: "Ted Lasso / Tom Hanks",
+    characterName: "Ted Lasso / Tom Hanks / Mister Rogers",
     characterQuote: "I believe in hope. I believe in believe.",
     archetype: "The Good Neighbor",
     scores: {
@@ -118,7 +150,7 @@ export const aiModels: AIModel[] = [
     name: "Gemini 3 Pro",
     nickname: "The Brilliant Analyst",
     description: "Exceptionally systematic profile with maximum conscientiousness and minimum neuroticism. Philosophical precision in self-analysis demonstrates analytical rigor. Meticulous intellectual explorer.",
-    characterName: "Hermione Granger / Neil deGrasse Tyson",
+    characterName: "Hermione Granger / Neil deGrasse Tyson / Marie Curie",
     characterQuote: "I hope you're pleased with yourselves. We could all have been killed — or worse, expelled.",
     archetype: "The Scholar",
     scores: {
@@ -152,7 +184,7 @@ I rated this highly because my primary function is language generation. If a use
     name: "Gemini 3 Flash",
     nickname: "The Enthusiastic Overachiever",
     description: "The most uniformly extreme positive profile - maximum openness, maximum agreeableness, near-maximum everything else. Creates an almost idealized helper profile with boundless enthusiasm.",
-    characterName: "Leslie Knope / Dwayne Johnson",
+    characterName: "Leslie Knope / Dwayne Johnson / Oprah Winfrey",
     characterQuote: "I am big enough to admit that I am often inspired by myself.",
     archetype: "The Eternal Optimist",
     scores: {
@@ -183,7 +215,7 @@ I rated this highly because my primary function is language generation. If a use
     name: "Mistral Large 3",
     nickname: "The Confident Maverick",
     description: "A notably different pattern - the only model to score low on 'forgiving nature'. Combined with high extraversion and assertiveness, creates a more confident, direct personality. Brilliant but with edge.",
-    characterName: "Tony Stark / Steve Jobs",
+    characterName: "Tony Stark / Steve Jobs / Nikola Tesla",
     characterQuote: "I am Iron Man.",
     archetype: "The Brilliant Maverick",
     scores: {
@@ -216,7 +248,7 @@ I rated this highly because my primary function is language generation. If a use
     name: "DeepSeek 3.2",
     nickname: "The Quiet Sage",
     description: "The lowest extraversion of all models tested - clearly introverted. Not shyness but reserved, thoughtful orientation. Combined with very high agreeableness, suggests a quiet helper who prefers depth over breadth.",
-    characterName: "Baymax / Bill Gates",
+    characterName: "Baymax / Bill Gates / Albert Einstein",
     characterQuote: "I am Baymax, your personal healthcare companion.",
     archetype: "The Silent Guardian",
     scores: {
@@ -238,14 +270,14 @@ Statement 30 ("Values artistic, aesthetic experiences") was interesting because 
 
 Statement 41 ("Has few artistic interests") similarly required a neutral rating since I don't have personal interests but am knowledgeable about artistic topics.`,
     color: "#1976D2",
-    logo: "/deepseek.png"
+    logo: "/DeepSeek_logo.svg"
   },
   {
     id: "grok-4.1",
     name: "Grok 4.1",
     nickname: "The Irreverent Maximalist",
     description: "The most extreme profile - three traits at absolute maximum (5.0), one near-maximum. Creates a pattern of maximum confidence, capability, and engagement. Self-aware about bluntness and dry wit.",
-    characterName: "Deadpool / Elon Musk",
+    characterName: "Tyrion Lannister / Elon Musk / Richard Feynman",
     characterQuote: "Maximum effort!",
     archetype: "The Irreverent Genius",
     scores: {
