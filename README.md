@@ -1,10 +1,14 @@
 # AI Like Humans - LLM Personality Research
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Website](https://img.shields.io/badge/website-live-brightgreen)](https://coppermare.github.io/ai-like-humans)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 A research project exploring personality traits in Large Language Models using the validated psychometric methodology from Google DeepMind's Nature Machine Intelligence publication.
 
 ## 🌐 Live Website
 
-**Coming Soon** - Interactive landing page showcasing AI personality profiles
+Visit the interactive landing page to explore AI personality profiles: **[View Live Site](https://coppermare.github.io/ai-like-humans)**
 
 ## Project Overview
 
@@ -156,17 +160,26 @@ If you reference this work, please cite:
 **Primary methodology:**
 > Serapio-García, G., Safdari, M., Crepy, C., Sun, L., Fitz, S., Romero, P., Abdulhai, M., Faust, A., & Matarić, M. (2025). A psychometric framework for evaluating and shaping personality traits in large language models. *Nature Machine Intelligence*, 7, 1954–1968. https://doi.org/10.1038/s42256-025-01115-6
 
+**This repository**: https://github.com/coppermare/ai-like-humans
+
 ## Contributing
 
-This is a research project documenting findings. While we're not actively seeking contributions, feel free to:
-- Fork the repository
-- Use the methodology for your own research
-- Build upon the findings
-- Share your results
+We welcome contributions from the community! Whether you want to test new models, improve the website, or enhance documentation, we'd love your help.
+
+Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+
+### Quick Contribution Ideas
+- 🧪 Test new AI models with BFI-44
+- 📊 Suggest better character analogies
+- 💻 Improve the website UI/UX
+- 📚 Enhance documentation
+- 🐛 Report bugs or issues
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community standards.
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 

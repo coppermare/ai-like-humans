@@ -1,0 +1,10 @@
+# Robots.txt for AI Like Humans
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://coppermare.github.io/ai-like-humans/sitemap.xml
+
+# Crawl-delay (optional, uncomment if needed)
+# Crawl-delay: 1
