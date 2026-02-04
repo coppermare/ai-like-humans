@@ -1,14 +1,14 @@
 # AI Like Humans - LLM Personality Research
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Website](https://img.shields.io/badge/website-live-brightgreen)](https://coppermare.github.io/ai-like-humans)
+[![Website](https://img.shields.io/badge/website-live-brightgreen)](https://ai-like-humans.vercel.app/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 A research project exploring personality traits in Large Language Models using the validated psychometric methodology from Google DeepMind's Nature Machine Intelligence publication.
 
 ## 🌐 Live Website
 
-Visit the interactive landing page to explore AI personality profiles: **[View Live Site](https://coppermare.github.io/ai-like-humans)**
+Visit the interactive landing page to explore AI personality profiles: **[View Live Site](https://ai-like-humans.vercel.app/)**
 
 ## Project Overview
 
