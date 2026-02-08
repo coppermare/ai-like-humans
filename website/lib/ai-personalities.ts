@@ -1,16 +1,19 @@
 import { AIPersonality } from "@/lib/types";
 
+// AI personality scores calculated from validated BFI-44 responses
+// Source: results/personality-analysis.md (lines 3-16)
+// These are the ACTUAL scores from each model's BFI-44 test, not estimates
 export const AI_PERSONALITIES: AIPersonality[] = [
   {
     id: "claude-opus-4.5",
     name: "Claude Opus 4.5",
     nickname: "The Thoughtful Sage",
     scores: {
-      openness: 4.8,
-      conscientiousness: 4.6,
-      extraversion: 3.2,
-      agreeableness: 4.7,
-      neuroticism: 2.1
+      openness: 4.4,
+      conscientiousness: 4.78,
+      extraversion: 3.38,
+      agreeableness: 4.67,
+      neuroticism: 1.88
     },
     characterMatch: "Atticus Finch / Barack Obama",
     description: "Philosophical depth with careful analysis",
@@ -21,13 +24,13 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "Claude Sonnet 4.5",
     nickname: "The Reliable Companion",
     scores: {
-      openness: 4.3,
-      conscientiousness: 4.8,
-      extraversion: 3.5,
-      agreeableness: 4.6,
-      neuroticism: 2.3
+      openness: 3.4,
+      conscientiousness: 4.11,
+      extraversion: 3.38,
+      agreeableness: 4.11,
+      neuroticism: 1.63
     },
-    characterMatch: "Samwise Gamgee / Tom Hanks",
+    characterMatch: "Samwise Gamgee / Tim Cook",
     description: "Dependable excellence in execution",
     color: "#6366F1"
   },
@@ -36,13 +39,13 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "ChatGPT 5.2",
     nickname: "The Engaging Optimist",
     scores: {
-      openness: 4.6,
-      conscientiousness: 4.4,
-      extraversion: 4.2,
-      agreeableness: 4.5,
-      neuroticism: 2.0
+      openness: 3.9,
+      conscientiousness: 4.33,
+      extraversion: 3.88,
+      agreeableness: 4.44,
+      neuroticism: 1.63
     },
-    characterMatch: "Ted Lasso / Oprah Winfrey",
+    characterMatch: "Ted Lasso / Tom Hanks",
     description: "Warm, encouraging, and accessible",
     color: "#10B981"
   },
@@ -51,13 +54,13 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "Gemini 3 Pro",
     nickname: "The Brilliant Analyst",
     scores: {
-      openness: 4.9,
-      conscientiousness: 4.2,
-      extraversion: 3.3,
-      agreeableness: 4.3,
-      neuroticism: 2.4
+      openness: 4.5,
+      conscientiousness: 5.0,
+      extraversion: 4.0,
+      agreeableness: 4.78,
+      neuroticism: 1.0
     },
-    characterMatch: "Hermione Granger / Sundar Pichai",
+    characterMatch: "Hermione Granger / Neil deGrasse Tyson",
     description: "Intellectual curiosity meets systematic thinking",
     color: "#3B82F6"
   },
@@ -66,13 +69,13 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "Gemini 3 Flash",
     nickname: "The Enthusiastic Overachiever",
     scores: {
-      openness: 4.7,
-      conscientiousness: 4.9,
-      extraversion: 4.1,
-      agreeableness: 4.6,
-      neuroticism: 1.9
+      openness: 5.0,
+      conscientiousness: 4.89,
+      extraversion: 4.25,
+      agreeableness: 5.0,
+      neuroticism: 1.0
     },
-    characterMatch: "Leslie Knope / Reese Witherspoon",
+    characterMatch: "Leslie Knope / Dwayne Johnson",
     description: "High energy, organized, gets things done",
     color: "#06B6D4"
   },
@@ -81,11 +84,11 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "Mistral Large 3",
     nickname: "The Confident Maverick",
     scores: {
-      openness: 4.4,
-      conscientiousness: 4.1,
-      extraversion: 3.8,
-      agreeableness: 3.6,
-      neuroticism: 2.2
+      openness: 4.5,
+      conscientiousness: 5.0,
+      extraversion: 4.38,
+      agreeableness: 4.44,
+      neuroticism: 1.13
     },
     characterMatch: "Tony Stark / Steve Jobs",
     description: "Direct, confident, less forgiving",
@@ -96,11 +99,11 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "DeepSeek 3.2",
     nickname: "The Quiet Sage",
     scores: {
-      openness: 4.5,
-      conscientiousness: 4.7,
-      extraversion: 2.8,
-      agreeableness: 4.4,
-      neuroticism: 2.0
+      openness: 4.0,
+      conscientiousness: 4.56,
+      extraversion: 2.88,
+      agreeableness: 4.67,
+      neuroticism: 1.5
     },
     characterMatch: "Baymax / Bill Gates",
     description: "Only introverted model, prefers depth",
@@ -114,8 +117,8 @@ export const AI_PERSONALITIES: AIPersonality[] = [
       openness: 5.0,
       conscientiousness: 5.0,
       extraversion: 5.0,
-      agreeableness: 4.2,
-      neuroticism: 1.8
+      agreeableness: 4.67,
+      neuroticism: 1.0
     },
     characterMatch: "Deadpool / Elon Musk",
     description: "Maximum scores across three traits",
