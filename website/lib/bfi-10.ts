@@ -35,79 +35,79 @@ export const BFI_10_QUESTIONS: Question[] = [
     id: 1,
     trait: "E",
     reverse: false,
-    textA: "Reserved, quiet",
-    textB: "Talkative, open"
+    textA: "reserved and quiet",
+    textB: "outgoing and talkative"
   },
   // Q2: Agreeableness - Low scores = Critical, High scores = Trusting
   {
     id: 2,
     trait: "A",
     reverse: false,
-    textA: "Skeptical, suspicious",
-    textB: "Trusting, forgiving"
+    textA: "critical and skeptical",
+    textB: "trusting and forgiving"
   },
   // Q3: Conscientiousness - Low scores = Lazy, High scores = Thorough
   {
     id: 3,
     trait: "C",
     reverse: false,
-    textA: "Tends to be lazy",
-    textB: "Diligent, hard-working"
+    textA: "disorganized and lazy",
+    textB: "disciplined and thorough"
   },
   // Q4: Neuroticism - Low scores = Calm/Stable, High scores = Anxious
   {
     id: 4,
     trait: "N",
     reverse: false,
-    textA: "Relaxed, handles stress well",
-    textB: "Easily stressed, tense"
+    textA: "calm and relaxed",
+    textB: "anxious and easily stressed"
   },
   // Q5: Openness - Low scores = Conventional, High scores = Imaginative
   {
     id: 5,
     trait: "O",
     reverse: false,
-    textA: "Has few artistic interests",
-    textB: "Values artistic experiences"
+    textA: "practical with few artistic interests",
+    textB: "creative and values art"
   },
   // Q6: Extraversion - Low scores = Quiet, High scores = Outgoing
   {
     id: 6,
     trait: "E",
     reverse: false,
-    textA: "Prefers being alone",
-    textB: "Outgoing, sociable"
+    textA: "introverted and private",
+    textB: "sociable and outgoing"
   },
   // Q7: Agreeableness - Low scores = Critical, High scores = Agreeable
   {
     id: 7,
     trait: "A",
     reverse: false,
-    textA: "Tends to find fault with others",
-    textB: "Considerate, kind"
+    textA: "critical of others",
+    textB: "kind and considerate"
   },
   // Q8: Conscientiousness - Low scores = Careless, High scores = Thorough
   {
     id: 8,
     trait: "C",
     reverse: false,
-    textA: "Somewhat careless",
-    textB: "Thorough, efficient"
+    textA: "careless and disorganized",
+    textB: "thorough and efficient"
   },
   // Q9: Neuroticism - Low scores = Stable, High scores = Anxious
   {
     id: 9,
     trait: "N",
     reverse: false,
-    textA: "Calm, emotionally stable",
-    textB: "Gets nervous easily"
+    textA: "emotionally stable",
+    textB: "nervous and moody"
   },
   // Q10: Openness - Low scores = Conventional, High scores = Imaginative
   {
     id: 10,
     trait: "O",
     reverse: false,
-    textA: "Conventional, practical",
-    textB: "Has an active imagination"
+    textA: "conventional and practical",
+    textB: "imaginative and creative"
   }
 ];

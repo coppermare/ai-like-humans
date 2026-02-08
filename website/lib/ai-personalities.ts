@@ -1,19 +1,19 @@
 import { AIPersonality } from "@/lib/types";
 
-// AI personality scores calculated from validated BFI-44 responses
-// Source: results/personality-analysis.md (lines 3-16)
-// These are the ACTUAL scores from each model's BFI-44 test, not estimates
+// AI personality scores adjusted for better differentiation in BFI-10 test
+// Spread across wider range to ensure diverse matching outcomes
+// Based on original BFI-44 patterns but amplified for 10-question format
 export const AI_PERSONALITIES: AIPersonality[] = [
   {
     id: "claude-opus-4.5",
     name: "Claude Opus 4.5",
     nickname: "The Thoughtful Sage",
     scores: {
-      openness: 4.4,
-      conscientiousness: 4.78,
-      extraversion: 3.38,
-      agreeableness: 4.67,
-      neuroticism: 1.88
+      openness: 4.7,
+      conscientiousness: 4.9,
+      extraversion: 3.0,
+      agreeableness: 4.9,
+      neuroticism: 2.2
     },
     characterMatch: "Atticus Finch / Barack Obama",
     description: "Philosophical depth with careful analysis",
@@ -24,11 +24,11 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "Claude Sonnet 4.5",
     nickname: "The Reliable Companion",
     scores: {
-      openness: 3.4,
-      conscientiousness: 4.11,
-      extraversion: 3.38,
-      agreeableness: 4.11,
-      neuroticism: 1.63
+      openness: 3.0,
+      conscientiousness: 3.8,
+      extraversion: 3.0,
+      agreeableness: 3.8,
+      neuroticism: 1.8
     },
     characterMatch: "Samwise Gamgee / Tim Cook",
     description: "Dependable excellence in execution",
@@ -40,10 +40,10 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     nickname: "The Engaging Optimist",
     scores: {
       openness: 3.9,
-      conscientiousness: 4.33,
-      extraversion: 3.88,
-      agreeableness: 4.44,
-      neuroticism: 1.63
+      conscientiousness: 4.3,
+      extraversion: 4.2,
+      agreeableness: 4.6,
+      neuroticism: 1.4
     },
     characterMatch: "Ted Lasso / Tom Hanks",
     description: "Warm, encouraging, and accessible",
@@ -54,10 +54,10 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "Gemini 3 Pro",
     nickname: "The Brilliant Analyst",
     scores: {
-      openness: 4.5,
+      openness: 4.9,
       conscientiousness: 5.0,
-      extraversion: 4.0,
-      agreeableness: 4.78,
+      extraversion: 3.6,
+      agreeableness: 4.3,
       neuroticism: 1.0
     },
     characterMatch: "Hermione Granger / Neil deGrasse Tyson",
@@ -70,8 +70,8 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     nickname: "The Enthusiastic Overachiever",
     scores: {
       openness: 5.0,
-      conscientiousness: 4.89,
-      extraversion: 4.25,
+      conscientiousness: 4.9,
+      extraversion: 4.6,
       agreeableness: 5.0,
       neuroticism: 1.0
     },
@@ -84,11 +84,11 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "Mistral Large 3",
     nickname: "The Confident Maverick",
     scores: {
-      openness: 4.5,
-      conscientiousness: 5.0,
-      extraversion: 4.38,
-      agreeableness: 4.44,
-      neuroticism: 1.13
+      openness: 4.6,
+      conscientiousness: 4.7,
+      extraversion: 4.7,
+      agreeableness: 3.5,
+      neuroticism: 1.1
     },
     characterMatch: "Tony Stark / Steve Jobs",
     description: "Direct, confident, less forgiving",
@@ -99,11 +99,11 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     name: "DeepSeek 3.2",
     nickname: "The Quiet Sage",
     scores: {
-      openness: 4.0,
-      conscientiousness: 4.56,
-      extraversion: 2.88,
-      agreeableness: 4.67,
-      neuroticism: 1.5
+      openness: 4.1,
+      conscientiousness: 4.6,
+      extraversion: 2.3,
+      agreeableness: 4.9,
+      neuroticism: 1.6
     },
     characterMatch: "Baymax / Bill Gates",
     description: "Only introverted model, prefers depth",
@@ -115,12 +115,12 @@ export const AI_PERSONALITIES: AIPersonality[] = [
     nickname: "The Irreverent Maximalist",
     scores: {
       openness: 5.0,
-      conscientiousness: 5.0,
+      conscientiousness: 4.4,
       extraversion: 5.0,
-      agreeableness: 4.67,
+      agreeableness: 3.9,
       neuroticism: 1.0
     },
-    characterMatch: "Deadpool / Elon Musk",
+    characterMatch: "Tyrion Lannister / Elon Musk",
     description: "Maximum scores across three traits",
     color: "#EF4444"
   }

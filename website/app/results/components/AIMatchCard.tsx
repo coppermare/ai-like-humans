@@ -23,12 +23,39 @@ export const AIMatchCard = ({
   };
 
   const getCharacterImages = (characterMatch: string): string[] => {
+    // Map character names to their exact filenames
+    const filenameMap: Record<string, string> = {
+      "Atticus Finch": "Atticus_Finch.png",
+      "Barack Obama": "Barack_Obama.png",
+      "Mahatma Gandhi": "Mahatma_Gandhi.png",
+      "Neil deGrasse Tyson": "NeildeGrasseTyson.png",
+      "Samwise Gamgee": "SamwiseGamgee.png",
+      "Tim Cook": "TimCook.png",
+      "Ted Lasso": "TedLasso.png",
+      "Tom Hanks": "TomHanks.png",
+      "Hermione Granger": "HermioneGranger.png",
+      "Leslie Knope": "LeslieKnope.png",
+      "Dwayne Johnson": "DwayneJohnson.png",
+      "Tony Stark": "TonyStark.png",
+      "Steve Jobs": "SteveJobs.png",
+      "Baymax": "Baymax.png",
+      "Bill Gates": "BillGates.png",
+      "Tyrion Lannister": "TyrionLannister.png",
+      "Elon Musk": "ElonMusk.png"
+    };
+    
     const images: string[] = [];
     const characters = characterMatch.split(" / ");
     
     for (const char of characters) {
-      const normalized = char.trim().replace(/\s+/g, "");
-      images.push(`/character_images/${normalized}.png`);
+      const normalized = char.trim();
+      const filename = filenameMap[normalized];
+      if (filename) {
+        images.push(`/character_images/${filename}`);
+      } else {
+        // Fallback: remove spaces
+        images.push(`/character_images/${normalized.replace(/\s+/g, "")}.png`);
+      }
     }
     
     return images;
