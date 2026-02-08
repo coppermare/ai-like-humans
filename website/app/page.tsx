@@ -79,6 +79,11 @@ export default function Home() {
               The results? Each AI exhibited remarkably distinct traits—from philosophical sages to irreverent mavericks. 
               Discover which AI thinks like you.
             </p>
+            <div className="mt-6 flex justify-center">
+              <Button size="lg" asChild>
+                <a href="/test">Take the test</a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
