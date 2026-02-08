@@ -86,11 +86,37 @@ export const ShareButtons = ({ text }: ShareButtonsProps) => {
       ctx.fillStyle = "#0a0a0a";
       ctx.fillRect(0, 0, width, height);
 
-      // Title
+      // Platform logo - centered at top, no stretching
+      try {
+        const platformLogo = await loadImage("/AI__Humans.svg");
+        // Maintain aspect ratio
+        const logoMaxWidth = 200;
+        const logoMaxHeight = 60;
+        const logoAspect = platformLogo.width / platformLogo.height;
+        
+        let logoWidth = logoMaxWidth;
+        let logoHeight = logoMaxWidth / logoAspect;
+        
+        // If height exceeds max, scale by height instead
+        if (logoHeight > logoMaxHeight) {
+          logoHeight = logoMaxHeight;
+          logoWidth = logoMaxHeight * logoAspect;
+        }
+        
+        // Center horizontally at the top
+        const logoX = (width - logoWidth) / 2;
+        const logoY = 40;
+        
+        ctx.drawImage(platformLogo, logoX, logoY, logoWidth, logoHeight);
+      } catch (error) {
+        console.error(error);
+      }
+
+      // Title - smaller and more spaced from logo
       ctx.fillStyle = "#e5e5e5";
-      ctx.font = "bold 56px sans-serif";
+      ctx.font = "bold 42px sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText("AI Personality Test Results", width / 2, 110);
+      ctx.fillText("AI Personality Test Results", width / 2, 160);
 
       // Match info (extracted from page)
       const matchName = document.querySelector('[data-match-name]')?.textContent || "";
@@ -102,29 +128,22 @@ export const ShareButtons = ({ text }: ShareButtonsProps) => {
       const characterName2 = document.querySelector('[data-character-name-2]')?.getAttribute("data-character-name-2") || "";
       const matchNickname = document.querySelector('[data-match-nickname]')?.getAttribute("data-match-nickname") || "";
       const matchDescription = document.querySelector('[data-match-description]')?.getAttribute("data-match-description") || "";
-      
-      // Platform logo
-      try {
-        const platformLogo = await loadImage("/AI__Humans.svg");
-        ctx.drawImage(platformLogo, 50, 30, 140, 48);
-      } catch (error) {
-        console.error(error);
-      }
 
-      // Match info
+      // Match info - adjust spacing
       ctx.textAlign = "center";
       ctx.font = "40px sans-serif";
-      ctx.fillText(`Your match: ${matchName}`, width / 2, 230);
+      ctx.fillStyle = "#e5e5e5";
+      ctx.fillText(`Your match: ${matchName}`, width / 2, 250);
       ctx.font = "30px sans-serif";
       ctx.fillStyle = "#a3a3a3";
       if (matchNickname) {
-        ctx.fillText(matchNickname, width / 2, 270);
+        ctx.fillText(matchNickname, width / 2, 290);
       }
       ctx.font = "34px sans-serif";
-      ctx.fillText(`Similarity: ${similarity}`, width / 2, 320);
+      ctx.fillText(`Similarity: ${similarity}`, width / 2, 340);
 
-      // Images
-      const imageY = 360;
+      // Images - adjust Y position for better spacing
+      const imageY = 380;
       if (modelLogo) {
         try {
           const modelImg = await loadImage(modelLogo);
